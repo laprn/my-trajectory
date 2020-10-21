@@ -66,15 +66,6 @@ class BlogPostTemplate extends React.Component {
         >
           {post.created}
         </p>
-        <BackgroundImage
-          Tag="div"
-          className="post-hero"
-          fluid={post.metadata.hero.local.childImageSharp.fluid}
-          backgroundColor={`#007ACC`}
-          style={{
-            marginBottom: rhythm(0.6),
-          }}
-        />
         <div
           className="post-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
@@ -84,8 +75,6 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio settings={author} />
-
         <ul
           style={{
             display: 'flex',
